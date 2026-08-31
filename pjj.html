@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Topik A - Kedatangan Bangsa-Bangsa Asing di Indonesia</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #eef7ff;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #5b7cfa, #8d6bea);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            box-shadow: 0 8px 25px rgba(70, 70, 150, 0.2);
+        }
+
+        header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            margin: 25px 0;
+            padding: 28px;
+            border-radius: 22px;
+            box-shadow: 0 7px 25px rgba(50, 80, 120, 0.09);
+        }
+
+        .card h2 {
+            color: #536dfe;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .card h3 {
+            color: #6a5acd;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        /* TUJUAN */
+        .goal-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .goal {
+            background: #f2f5ff;
+            padding: 18px;
+            border-radius: 16px;
+            border-left: 5px solid #6979ff;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #fff8dc;
+            border-left: 6px solid #ffc107;
+            padding: 18px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .important {
+            background: #e9f8ef;
+            border-left: 6px solid #38b86b;
+            padding: 18px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        /* 3G */
+        .three-g {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .g-card {
+            padding: 22px;
+            border-radius: 20px;
+            text-align: center;
+            background: #f5f3ff;
+        }
+
+        .g-card .icon {
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .g-card h3 {
+            margin-top: 0;
+        }
+
+        /* BANGSA */
+        .nation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .nation {
+            border-radius: 20px;
+            padding: 22px;
+            background: #f7fbff;
+            border: 1px solid #e0e9f5;
+            transition: 0.25s;
+        }
+
+        .nation:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(50,80,120,0.12);
+        }
+
+        .nation h3 {
+            margin-top: 0;
+            color: #536dfe;
+        }
+
+        .nation .year {
+            display: inline-block;
+            background: #536dfe;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-top: 25px;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #8998ff;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 18px;
+            background: #f8f9ff;
+            border-radius: 15px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -29px;
+            top: 22px;
+            width: 13px;
+            height: 13px;
+            background: #536dfe;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #536dfe;
+        }
+
+        .timeline-item strong {
+            color: #536dfe;
+        }
+
+        /* VIDEO */
+        .video-card {
+            background: linear-gradient(135deg, #eef2ff, #f7f3ff);
+            border-radius: 22px;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 17px;
+            background: #202124;
+            margin-top: 15px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border: none;
+        }
+
+        .video-note {
+            margin-top: 12px;
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+        /* QUIZ */
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .quiz-header h2 {
+            color: #536dfe;
+        }
+
+        .student-box {
+            background: #f4f7ff;
+            padding: 20px;
+            border-radius: 17px;
+            margin-bottom: 25px;
+        }
+
+        .student-box label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .student-box input {
+            width: 100%;
+            padding: 13px 15px;
+            border: 2px solid #dce3ff;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .student-box input:focus {
+            border-color: #536dfe;
+        }
+
+        .question {
+            background: #fafbff;
+            padding: 22px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            border: 1px solid #e7eaff;
+        }
+
+        .question h3 {
+            margin-top: 0;
+            color: #3949ab;
+            font-size: 17px;
+        }
+
+        .option {
+            display: block;
+            background: white;
+            border: 1px solid #dfe4f4;
+            padding: 12px 15px;
+            border-radius: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            background: #f0f3ff;
+            border-color: #8391ff;
+        }
+
+        .option input {
+            margin-right: 8px;
+        }
+
+        .submit-btn,
+        .reset-btn {
+            border: none;
+            padding: 14px 25px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .submit-btn {
+            background: #536dfe;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background: #4057d6;
+            transform: translateY(-2px);
+        }
+
+        .reset-btn {
+            background: #eceff1;
+            color: #37474f;
+            margin-left: 8px;
+        }
+
+        /* RESULT */
+        #result {
+            display: none;
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 20px;
+            background: #edf9f1;
+            border: 2px solid #70cf91;
+            text-align: center;
+        }
+
+        #result h2 {
+            color: #269653;
+            margin-bottom: 10px;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: 800;
+            color: #536dfe;
+            margin: 10px 0;
+        }
+
+        .result-detail {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .result-item {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            min-width: 120px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            padding: 30px 20px;
+            text-align: center;
+            background: #536dfe;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .three-g {
+                grid-template-columns: 1fr;
+            }
+
+            .result-detail {
+                gap: 10px;
+            }
+
+            .submit-btn,
+            .reset-btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="badge">IPAS / Sejarah Indonesia • Kelas 6 SD</div>
+
+        <h1>Topik A: Kedatangan Bangsa-Bangsa Asing di Indonesia</h1>
+
+        <p>
+            Mengenal latar belakang dan perjalanan bangsa-bangsa asing
+            datang ke Indonesia.
+        </p>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- TUJUAN PEMBELAJARAN -->
+    <section class="card">
+
+        <h2>🎯 Tujuan Pembelajaran</h2>
+
+        <p>
+            Setelah mempelajari materi ini, siswa diharapkan dapat:
+        </p>
+
+        <div class="goal-list">
+
+            <div class="goal">
+                <strong>1.</strong>
+                Menjelaskan alasan bangsa-bangsa asing datang ke Indonesia.
+            </div>
+
+            <div class="goal">
+                <strong>2.</strong>
+                Menjelaskan tujuan 3G: Gold, Gospel, dan Glory.
+            </div>
+
+            <div class="goal">
+                <strong>3.</strong>
+                Mengenal bangsa Portugis, Spanyol, Belanda, dan Inggris.
+            </div>
+
+            <div class="goal">
+                <strong>4.</strong>
+                Menjelaskan pengaruh kedatangan bangsa asing terhadap Indonesia.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PENGANTAR -->
+    <section class="card">
+
+        <h2>📖 Mengapa Bangsa Asing Datang ke Indonesia?</h2>
+
+        <p>
+            Indonesia sejak dahulu dikenal sebagai wilayah yang kaya akan
+            hasil bumi, terutama rempah-rempah seperti cengkih, pala, dan lada.
+            Rempah-rempah tersebut memiliki nilai jual yang tinggi di Eropa.
+        </p>
+
+        <p style="margin-top: 12px;">
+            Pada akhir abad ke-15 dan awal abad ke-16, bangsa-bangsa Eropa
+            mulai melakukan pelayaran dan penjelajahan ke berbagai wilayah
+            dunia. Salah satu tujuan mereka adalah mencari sumber rempah-rempah
+            secara langsung.
+        </p>
+
+        <div class="highlight">
+            <strong>💡 Tahukah kamu?</strong><br>
+            Rempah-rempah dari Nusantara sangat berharga di Eropa.
+            Karena itu, wilayah penghasil rempah-rempah menjadi salah satu
+            tujuan penting pelayaran bangsa Eropa.
+        </div>
+
+    </section>
+
+
+    <!-- 3G -->
+    <section class="card">
+
+        <h2>🌍 Semboyan 3G</h2>
+
+        <p>
+            Kedatangan bangsa Eropa juga berkaitan dengan semangat
+            <strong>3G</strong>, yaitu Gold, Gospel, dan Glory.
+        </p>
+
+        <div class="three-g">
+
+            <div class="g-card">
+                <div class="icon">💰</div>
+                <h3>Gold</h3>
+                <p>
+                    Keinginan memperoleh kekayaan, terutama melalui
+                    perdagangan dan sumber daya.
+                </p>
+            </div>
+
+            <div class="g-card">
+                <div class="icon">⛪</div>
+                <h3>Gospel</h3>
+                <p>
+                    Keinginan menyebarkan agama Kristen ke wilayah
+                    yang mereka datangi.
+                </p>
+            </div>
+
+            <div class="g-card">
+                <div class="icon">👑</div>
+                <h3>Glory</h3>
+                <p>
+                    Keinginan memperoleh kejayaan, kekuasaan,
+                    dan memperluas wilayah pengaruh.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BANGSA EROPA -->
+    <section class="card">
+
+        <h2>⛵ Bangsa-Bangsa Asing yang Datang ke Indonesia</h2>
+
+        <div class="nation-grid">
+
+            <div class="nation">
+
+                <span class="year">Portugis</span>
+
+                <h3>🇵🇹 Portugis</h3>
+
+                <p>
+                    Portugis merupakan salah satu bangsa Eropa yang
+                    melakukan pelayaran menuju wilayah penghasil rempah-rempah.
+                </p>
+
+                <p style="margin-top: 10px;">
+                    Setelah menguasai Malaka pada tahun 1511,
+                    Portugis melanjutkan pelayaran ke wilayah Maluku.
+                </p>
+
+            </div>
+
+
+            <div class="nation">
+
+                <span class="year">Spanyol</span>
+
+                <h3>🇪🇸 Spanyol</h3>
+
+                <p>
+                    Spanyol melakukan pelayaran menuju kepulauan
+                    penghasil rempah-rempah dan mencapai wilayah Maluku.
+                </p>
+
+                <p style="margin-top: 10px;">
+                    Kedatangan Spanyol di Maluku kemudian menimbulkan
+                    persaingan dengan Portugis.
+                </p>
+
+            </div>
+
+
+            <div class="nation">
+
+                <span class="year">Belanda</span>
+
+                <h3>🇳🇱 Belanda</h3>
+
+                <p>
+                    Belanda tiba di Banten pada tahun 1596
+                    dalam pelayaran yang dipimpin oleh Cornelis de Houtman.
+                </p>
+
+                <p style="margin-top: 10px;">
+                    Belanda kemudian memperluas kekuasaannya melalui
+                    perdagangan dan pembentukan VOC.
+                </p>
+
+            </div>
+
+
+            <div class="nation">
+
+                <span class="year">Inggris</span>
+
+                <h3>🇬🇧 Inggris</h3>
+
+                <p>
+                    Inggris juga melakukan kegiatan perdagangan
+                    di wilayah Nusantara dan bersaing dalam perdagangan
+                    rempah-rempah.
+                </p>
+
+                <p style="margin-top: 10px;">
+                    Inggris pernah memiliki pengaruh di beberapa wilayah
+                    Nusantara pada masa tertentu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIMELINE -->
+    <section class="card">
+
+        <h2>🕰️ Timeline Singkat</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <strong>1498</strong><br>
+                Vasco da Gama mencapai India melalui jalur laut
+                mengelilingi Afrika. Jalur ini membuka akses bangsa
+                Eropa menuju pusat perdagangan Asia.
+            </div>
+
+            <div class="timeline-item">
+                <strong>1511</strong><br>
+                Portugis berhasil menguasai Malaka.
+            </div>
+
+            <div class="timeline-item">
+                <strong>Abad ke-16</strong><br>
+                Portugis dan Spanyol mencapai wilayah Maluku
+                untuk mendapatkan rempah-rempah.
+            </div>
+
+            <div class="timeline-item">
+                <strong>1596</strong><br>
+                Belanda tiba di Banten dalam pelayaran
+                yang dipimpin Cornelis de Houtman.
+            </div>
+
+            <div class="timeline-item">
+                <strong>1602</strong><br>
+                Belanda mendirikan VOC untuk mengatur dan
+                memperkuat perdagangan mereka di wilayah Asia.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DAMPAK -->
+    <section class="card">
+
+        <h2>📚 Dampak Kedatangan Bangsa Asing</h2>
+
+        <p>
+            Kedatangan bangsa-bangsa asing membawa berbagai perubahan
+            dalam kehidupan masyarakat Nusantara. Pada awalnya mereka
+            melakukan perdagangan, tetapi kemudian sebagian bangsa Eropa
+            berusaha menguasai perdagangan dan wilayah.
+        </p>
+
+        <div class="important">
+
+            <strong>Hal penting untuk diingat:</strong>
+
+            <ul style="margin: 10px 0 0 20px;">
+
+                <li>
+                    Indonesia kaya akan rempah-rempah.
+                </li>
+
+                <li>
+                    Rempah-rempah menjadi salah satu daya tarik bagi
+                    bangsa Eropa.
+                </li>
+
+                <li>
+                    Bangsa Portugis, Spanyol, Belanda, dan Inggris
+                    datang ke Nusantara.
+                </li>
+
+                <li>
+                    Persaingan perdagangan kemudian berkembang menjadi
+                    perebutan kekuasaan dan penguasaan wilayah.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO YOUTUBE -->
+    <section class="card">
+
+        <h2>🎬 Video Pembelajaran</h2>
+
+        <div class="video-card">
+
+            <h3 style="margin-top: 0;">
+                Yuk, Simak Video Pembelajaran!
+            </h3>
+
+            <p>
+                Tonton video berikut untuk memperkuat pemahamanmu
+                tentang kedatangan bangsa-bangsa asing di Indonesia.
+            </p>
+
+            <div class="video-wrapper">
+
+                <!--
+                    GANTI VIDEO_ID DENGAN ID VIDEO YOUTUBE.
+
+                    Contoh:
+                    https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+                    Maka ID videonya:
+                    dQw4w9WgXcQ
+
+                    Masukkan menjadi:
+                    https://www.youtube.com/embed/dQw4w9WgXcQ
+                -->
+
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Video Pembelajaran Kedatangan Bangsa-Bangsa Asing di Indonesia"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <p class="video-note">
+                💡 Guru dapat mengganti VIDEO_ID dengan ID video YouTube
+                yang sesuai dengan materi pembelajaran.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- KUIS -->
+    <section class="card" id="quiz">
+
+        <div class="quiz-header">
+
+            <h2>📝 Kuis Evaluasi</h2>
+
+            <p>
+                Uji pemahamanmu tentang Kedatangan Bangsa-Bangsa Asing
+                di Indonesia.
+            </p>
+
+            <p>
+                <strong>Jumlah soal: 5</strong> |
+                <strong>Nilai maksimal: 100</strong>
+            </p>
+
+        </div>
+
+
+        <!-- NAMA SISWA -->
+        <div class="student-box">
+
+            <label for="studentName">
+                Nama Lengkap
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Masukkan nama lengkap kamu..."
+                autocomplete="name">
+
+        </div>
+
+
+        <form id="quizForm">
+
+
+            <!-- SOAL 1 -->
+            <div class="question">
+
+                <h3>
+                    1. Salah satu alasan utama bangsa-bangsa Eropa
+                    datang ke Nusantara adalah...
+                </h3>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="A">
+                    A. Mencari daerah bersalju
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="B">
+                    B. Mencari rempah-rempah
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="C">
+                    C. Mencari padang rumput
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q1" value="D">
+                    D. Mencari hewan kutub
+                </label>
+
+            </div>
+
+
+            <!-- SOAL 2 -->
+            <div class="question">
+
+                <h3>
+                    2. Semboyan bangsa Eropa yang berarti
+                    memperoleh kekayaan adalah...
+                </h3>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="A">
+                    A. Gospel
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="B">
+                    B. Glory
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="C">
+                    C. Gold
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q2" value="D">
+                    D. Great
+                </label>
+
+            </div>
+
+
+            <!-- SOAL 3 -->
+            <div class="question">
+
+                <h3>
+                    3. Bangsa Belanda pertama kali tiba di Banten
+                    pada tahun...
+                </h3>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="A">
+                    A. 1498
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="B">
+                    B. 1511
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="C">
+                    C. 1596
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q3" value="D">
+                    D. 1602
+                </label>
+
+            </div>
+
+
+            <!-- SOAL 4 -->
+            <div class="question">
+
+                <h3>
+                    4. Bangsa Eropa yang berhasil menguasai Malaka
+                    pada tahun 1511 adalah...
+                </h3>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="A">
+                    A. Portugis
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="B">
+                    B. Belanda
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="C">
+                    C. Inggris
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q4" value="D">
+                    D. Spanyol
+                </label>
+
+            </div>
+
+
+            <!-- SOAL 5 -->
+            <div class="question">
+
+                <h3>
+                    5. Tujuan yang berkaitan dengan penyebaran agama
+                    dalam semboyan 3G disebut...
+                </h3>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="A">
+                    A. Gold
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="B">
+                    B. Gospel
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="C">
+                    C. Glory
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="q5" value="D">
+                    D. Great
+                </label>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="submit-btn"
+                onclick="checkQuiz()">
+                ✓ Periksa Jawaban
+            </button>
+
+            <button
+                type="button"
+                class="reset-btn"
+                onclick="resetQuiz()">
+                ↻ Ulangi Kuis
+            </button>
+
+        </form>
+
+
+        <!-- HASIL -->
+        <div id="result">
+
+            <h2>🎉 Hasil Kuis</h2>
+
+            <p id="resultName"></p>
+
+            <div class="score" id="score">
+                0
+            </div>
+
+            <p>
+                Nilai kamu
+            </p>
+
+            <div class="result-detail">
+
+                <div class="result-item">
+                    <strong id="correct">
+                        0
+                    </strong>
+                    <br>
+                    Benar
+                </div>
+
+                <div class="result-item">
+                    <strong id="wrong">
+                        0
+                    </strong>
+                    <br>
+                    Salah
+                </div>
+
+                <div class="result-item">
+                    <strong id="total">
+                        5
+                    </strong>
+                    <br>
+                    Jumlah Soal
+                </div>
+
+            </div>
+
+            <p
+                id="message"
+                style="margin-top: 18px; font-weight: 600;">
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        <strong>IPAS / Sejarah Kelas 6 SD</strong>
+    </p>
+
+    <p>
+        Topik A: Kedatangan Bangsa-Bangsa Asing di Indonesia
+    </p>
+
+    <p style="margin-top: 8px; font-size: 13px;">
+        Belajar sejarah untuk mengenal perjalanan bangsa Indonesia.
+    </p>
+
+</footer>
+
+
+<script>
+
+    /*
+        KUNCI JAWABAN
+
+        Soal 1 = B
+        Soal 2 = C
+        Soal 3 = C
+        Soal 4 = A
+        Soal 5 = B
+    */
+
+    const answerKey = {
+        q1: "B",
+        q2: "C",
+        q3: "C",
+        q4: "A",
+        q5: "B"
+    };
+
+
+    function checkQuiz() {
+
+        const nameInput =
+            document.getElementById("studentName");
+
+        const name =
+            nameInput.value.trim();
+
+        if (name === "") {
+
+            alert(
+                "Silakan masukkan nama lengkap terlebih dahulu."
+            );
+
+            nameInput.focus();
+
+            return;
+        }
+
+
+        let correct = 0;
+
+        let answered = 0;
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            const selected =
+                document.querySelector(
+                    'input[name="q' + i + '"]:checked'
+                );
+
+
+            if (selected) {
+
+                answered++;
+
+                if (
+                    selected.value ===
+                    answerKey["q" + i]
+                ) {
+
+                    correct++;
+
+                }
+
+            }
+
+        }
+
+
+        if (answered < 5) {
+
+            alert(
+                "Silakan jawab semua 5 soal terlebih dahulu."
+            );
+
+            return;
+        }
+
+
+        const wrong = 5 - correct;
+
+        const score =
+            correct * 20;
+
+
+        document.getElementById("resultName").innerHTML =
+            "Nama: <strong>" +
+            escapeHTML(name) +
+            "</strong>";
+
+
+        document.getElementById("score").textContent =
+            score;
+
+
+        document.getElementById("correct").textContent =
+            correct;
+
+
+        document.getElementById("wrong").textContent =
+            wrong;
+
+
+        document.getElementById("total").textContent =
+            5;
+
+
+        let message = "";
+
+
+        if (score === 100) {
+
+            message =
+                "🌟 Luar biasa! Semua jawaban kamu benar!";
+
+        } else if (score >= 80) {
+
+            message =
+                "👏 Hebat! Pemahaman kamu sangat baik.";
+
+        } else if (score >= 60) {
+
+            message =
+                "👍 Bagus! Pelajari kembali materi yang masih belum dikuasai.";
+
+        } else {
+
+            message =
+                "💪 Tetap semangat! Baca kembali materi dan coba lagi.";
+
+        }
+
+
+        document.getElementById("message").textContent =
+            message;
+
+
+        document.getElementById("result").style.display =
+            "block";
+
+
+        document.getElementById("result")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+    }
+
+
+    function resetQuiz() {
+
+        document.getElementById("quizForm").reset();
+
+        document.getElementById("studentName").value = "";
+
+        document.getElementById("result").style.display =
+            "none";
+
+
+        window.scrollTo({
+            top: document.getElementById("quiz").offsetTop - 20,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    /*
+        Mencegah nama siswa yang dimasukkan
+        sebagai HTML sehingga lebih aman.
+    */
+
+    function escapeHTML(text) {
+
+        const div =
+            document.createElement("div");
+
+        div.textContent = text;
+
+        return div.innerHTML;
+
+    }
+
+</script>
+
+</body>
+</html>
