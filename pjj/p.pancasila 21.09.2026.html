@@ -1,0 +1,3083 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tugas PJJ Kelas 6B — Pendidikan Pancasila</title>
+
+<style>
+
+:root{
+    --bg:#f4f8ff;
+    --card:#ffffff;
+    --primary:#5b5ce2;
+    --primary-dark:#4546b8;
+    --secondary:#7c5cff;
+    --cyan:#39c6e8;
+    --green:#42c98b;
+    --yellow:#ffd95a;
+    --pink:#ff75a8;
+    --text:#25304a;
+    --muted:#68738a;
+    --border:#e5eaf5;
+    --shadow:0 10px 30px rgba(61,75,120,.10);
+    --radius:22px;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e9f5ff 0,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at top right,
+            #f4eaff 0,
+            transparent 28%
+        ),
+        var(--bg);
+
+    color:var(--text);
+    line-height:1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header{
+    padding:25px 16px 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b5ce2,
+            #7b61ff 55%,
+            #45c9e8
+        );
+
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.header::before,
+.header::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+}
+
+.header::before{
+    width:220px;
+    height:220px;
+    right:-80px;
+    top:-90px;
+}
+
+.header::after{
+    width:160px;
+    height:160px;
+    left:-70px;
+    bottom:-90px;
+}
+
+.header-inner{
+    max-width:1050px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.school{
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.4px;
+    opacity:.95;
+}
+
+.title{
+    font-size:clamp(27px,5vw,45px);
+    font-weight:800;
+    margin-top:5px;
+}
+
+.subtitle{
+    margin-top:7px;
+    font-size:16px;
+    opacity:.95;
+}
+
+.date-box{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    margin-top:18px;
+    padding:9px 15px;
+
+    background:rgba(255,255,255,.17);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    border-radius:50px;
+
+    backdrop-filter:blur(8px);
+
+    font-size:14px;
+    font-weight:600;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container{
+    max-width:1050px;
+
+    margin:-25px auto 0;
+
+    padding:
+        0
+        16px
+        45px;
+
+    position:relative;
+    z-index:3;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome{
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+    margin-bottom:25px;
+}
+
+.welcome h2{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.welcome p{
+    color:var(--muted);
+}
+
+.motivation{
+    margin-top:17px;
+
+    padding:
+        14px
+        16px;
+
+    border-radius:16px;
+
+    background:#f0f4ff;
+
+    border-left:
+        5px
+        solid
+        var(--primary);
+
+    color:#414b69;
+
+    font-weight:600;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title{
+    margin:
+        32px
+        0
+        15px;
+}
+
+.section-title h2{
+    font-size:25px;
+}
+
+.section-title p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+
+/* =========================================
+   MATERIAL GRID
+========================================= */
+
+.material-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
+
+    gap:18px;
+
+    align-items:start;
+}
+
+
+/* =========================================
+   MATERIAL CARD
+========================================= */
+
+.material-card{
+    background:var(--card);
+
+    border:
+        1px
+        solid
+        var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.material-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0
+        15px
+        35px
+        rgba(61,75,120,.14);
+}
+
+
+/* =========================================
+   IMAGE BOX
+   KHUSUS PNG PORTRAIT
+========================================= */
+
+.image-box{
+
+    width:100%;
+
+    /*
+       Tidak lagi menggunakan tinggi 210px.
+       Tinggi mengikuti rasio gambar.
+    */
+
+    min-height:360px;
+
+    max-height:620px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef3fb,
+            #f8f9fd
+        );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+    padding:12px;
+}
+
+
+/*
+   GAMBAR UTAMA
+
+   contain = seluruh gambar terlihat.
+   Tidak akan terpotong walaupun portrait.
+*/
+
+.image-box img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    max-width:100%;
+
+    max-height:590px;
+
+    object-fit:contain;
+
+    object-position:center center;
+
+    margin:auto;
+
+    border-radius:12px;
+}
+
+
+/*
+   Jika gambar sangat tinggi,
+   tetap seluruh gambar terlihat
+   dengan lebar yang menyesuaikan.
+*/
+
+.image-box img[src$=".png"]{
+    object-fit:contain;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.image-placeholder{
+
+    color:#8a94aa;
+
+    font-size:14px;
+
+    text-align:center;
+
+    padding:20px;
+
+    width:100%;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.card-content{
+    padding:19px;
+}
+
+.card-number{
+
+    display:inline-flex;
+
+    width:32px;
+    height:32px;
+
+    border-radius:50%;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#ececff;
+
+    color:var(--primary);
+
+    font-weight:800;
+
+    margin-bottom:10px;
+}
+
+.card-content h3{
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.card-content p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.example{
+
+    margin-top:12px;
+
+    padding:
+        11px
+        13px;
+
+    background:#f7f9ff;
+
+    border-radius:12px;
+
+    font-size:13px;
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.video-card{
+
+    background:var(--card);
+
+    border:
+        1px
+        solid
+        var(--border);
+
+    border-radius:var(--radius);
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+}
+
+.video-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    border-radius:17px;
+
+    background:#171b2b;
+}
+
+.video-wrapper iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+}
+
+.video-info{
+
+    padding:
+        15px
+        4px
+        3px;
+}
+
+.video-info h3{
+    font-size:19px;
+}
+
+.video-info p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+
+/* =========================================
+   RINGKASAN
+========================================= */
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap:12px;
+
+    margin-top:18px;
+}
+
+.summary-item{
+
+    padding:16px;
+
+    background:white;
+
+    border:
+        1px
+        solid
+        var(--border);
+
+    border-radius:16px;
+
+    text-align:center;
+}
+
+.summary-icon{
+    font-size:25px;
+}
+
+.summary-item strong{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:15px;
+}
+
+.summary-item span{
+
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-card{
+
+    background:white;
+
+    border:
+        1px
+        solid
+        var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+}
+
+.student-box{
+
+    background:#f6f8ff;
+
+    border-radius:17px;
+
+    padding:18px;
+
+    margin-bottom:22px;
+}
+
+.student-box label{
+
+    display:block;
+
+    font-weight:700;
+
+    margin-bottom:7px;
+}
+
+.student-box input{
+
+    width:100%;
+
+    border:
+        2px
+        solid
+        #e1e6f2;
+
+    padding:
+        13px
+        14px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.2s;
+}
+
+.student-box input:focus{
+
+    border-color:
+        var(--primary);
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.question{
+
+    border:
+        1px
+        solid
+        #e8ecf5;
+
+    border-radius:17px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    background:#fff;
+}
+
+.question-number{
+
+    color:var(--primary);
+
+    font-weight:800;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+}
+
+.question h3{
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    margin-bottom:13px;
+}
+
+.options{
+
+    display:grid;
+
+    gap:9px;
+}
+
+.option{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    padding:
+        11px
+        13px;
+
+    border:
+        1px
+        solid
+        #e4e8f2;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.option:hover{
+
+    background:#f5f6ff;
+
+    border-color:#bfc2ff;
+}
+
+.option input{
+
+    margin-top:5px;
+
+    accent-color:
+        var(--primary);
+}
+
+.option span{
+
+    font-size:14px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.button-area{
+
+    text-align:center;
+
+    margin-top:22px;
+}
+
+.btn{
+
+    border:0;
+
+    border-radius:50px;
+
+    padding:
+        13px
+        25px;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    margin:5px;
+}
+
+.btn-primary{
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color:white;
+
+    box-shadow:
+        0
+        8px
+        20px
+        rgba(91,92,226,.25);
+}
+
+.btn-primary:hover{
+
+    transform:
+        translateY(-2px);
+}
+
+.btn-secondary{
+
+    background:#eef1ff;
+
+    color:var(--primary);
+}
+
+.btn-secondary:hover{
+
+    background:#e3e7ff;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result{
+
+    display:none;
+
+    margin-top:25px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f3ff,
+            #f8f5ff
+        );
+
+    border:
+        2px
+        solid
+        #dfe2ff;
+}
+
+.result.show{
+
+    display:block;
+
+    animation:
+        appear
+        .4s
+        ease;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+.result-icon{
+    font-size:48px;
+}
+
+.result h2{
+
+    margin-top:5px;
+
+    font-size:26px;
+}
+
+.score{
+
+    font-size:55px;
+
+    font-weight:900;
+
+    color:var(--primary);
+
+    line-height:1.1;
+
+    margin:10px 0;
+}
+
+.result-message{
+    color:var(--muted);
+}
+
+.correction{
+
+    margin-top:18px;
+
+    text-align:left;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    font-size:13px;
+}
+
+.correction strong{
+    color:var(--primary);
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress-box{
+    margin-bottom:20px;
+}
+
+.progress-text{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:13px;
+
+    color:var(--muted);
+
+    margin-bottom:7px;
+}
+
+.progress{
+
+    width:100%;
+
+    height:9px;
+
+    background:#e8ebf4;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--primary),
+            var(--pink)
+        );
+
+    transition:.3s;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    margin-top:20px;
+
+    padding:
+        28px
+        16px;
+
+    text-align:center;
+
+    background:#202743;
+
+    color:white;
+}
+
+footer strong{
+
+    display:block;
+
+    font-size:16px;
+}
+
+footer span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#bfc7dd;
+
+    font-size:13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:900px){
+
+    .material-grid{
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
+    }
+
+    .summary{
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:650px){
+
+    .header{
+
+        padding-bottom:
+            45px;
+    }
+
+    .container{
+
+        padding-left:12px;
+
+        padding-right:12px;
+    }
+
+    .welcome,
+    .quiz-card{
+
+        padding:18px;
+    }
+
+
+    /*
+       Pada HP gambar portrait
+       dibuat lebih nyaman dilihat.
+    */
+
+    .material-grid{
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .image-box{
+
+        min-height:0;
+
+        max-height:none;
+
+        padding:10px 15px;
+    }
+
+    .image-box img{
+
+        width:auto;
+
+        max-width:100%;
+
+        height:auto;
+
+        max-height:none;
+
+        object-fit:contain;
+    }
+
+
+    .summary{
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .question{
+
+        padding:15px;
+    }
+
+}
+
+
+/* =========================================
+   HP KECIL
+========================================= */
+
+@media(max-width:400px){
+
+    .title{
+
+        font-size:28px;
+    }
+
+    .summary{
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .image-box{
+
+        padding:
+            8px
+            10px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <div class="school">
+            SDN 1 KANDANGAN KOTA
+        </div>
+
+        <div class="title">
+            Tugas PJJ Kelas 6B
+        </div>
+
+        <div class="subtitle">
+            Pendidikan Pancasila • Belajar dari Rumah
+        </div>
+
+        <div class="date-box">
+            📅 Senin, 21 September 2026
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+<!-- =========================================
+     WELCOME
+========================================= -->
+
+<section class="welcome">
+
+    <h2>
+        👋 Halo, Ayo Belajar Kembali !
+    </h2>
+
+    <p>
+        Meskipun kita sedang belajar dari rumah karena kondisi kabut asap,
+        tetap berusaha untuk semangat belajar. Materi hari ini kita akan belajar
+        tentang <strong>Norma dalam Kehidupan Sehari-hari</strong>.
+    </p>
+
+    <div class="motivation">
+
+        🌟 Baca do'a sebelum dan sesudah belajar !
+
+        Silahkan baca materinya dengan teliti,
+        simak videonya, kemudian latihan kuis.
+
+        Kerjakan kuis agar memperoleh nilai
+        <strong>100</strong>,
+
+        ulangi kembali kuis jika belum mencapai
+        nilai maksimal !
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MATERI
+========================================= -->
+
+<div class="section-title">
+
+    <h2>
+        📚 Pelajari Materinya berikut ini dengan serius!
+    </h2>
+
+    <p>
+        Kenali empat macam norma dan contoh akibat apabila norma tersebut dilanggar.
+    </p>
+
+</div>
+
+
+
+<section class="material-grid">
+
+
+<!-- =========================================
+     CARD 1
+========================================= -->
+
+<article class="material-card">
+
+
+    <div class="image-box">
+
+        <img
+            src="https://sdn1kandangankota.github.io/kelas6b/pjj/Pendidikan-Pancasila-BS-KLS-VI-Rev_72.png"
+            alt="Materi Norma Kesopanan"
+            loading="lazy"
+            onerror="
+                this.style.display='none';
+                this.nextElementSibling.style.display='block';
+            "
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+
+            🖼️<br>
+
+            Gambar materi tidak dapat dimuat.
+
+        </div>
+
+    </div>
+
+
+    <div class="card-content">
+
+        <div class="card-number">
+            1
+        </div>
+
+        <h3>
+            🤝 Norma Kesopanan
+        </h3>
+
+        <p>
+
+            Norma kesopanan adalah aturan yang berasal dari kebiasaan
+            dan tata krama dalam pergaulan masyarakat.
+
+        </p>
+
+
+        <div class="example">
+
+            <strong>
+                Contoh:
+            </strong>
+
+            <br>
+
+            Berbicara dengan santun,
+            menghormati orang yang lebih tua,
+            mengucapkan terima kasih,
+            dan meminta izin.
+
+        </div>
+
+
+        <div class="example">
+
+            <strong>
+                Akibat melanggar:
+            </strong>
+
+            <br>
+
+            Dapat dianggap tidak sopan,
+            ditegur, atau dijauhi oleh orang lain.
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================================
+     CARD 2
+========================================= -->
+
+<article class="material-card">
+
+
+    <div class="image-box">
+
+        <img
+            src="https://sdn1kandangankota.github.io/kelas6b/pjj/Pendidikan-Pancasila-BS-KLS-VI-Rev_73.png"
+            alt="Materi Norma Agama dan Kesusilaan"
+            loading="lazy"
+            onerror="
+                this.style.display='none';
+                this.nextElementSibling.style.display='block';
+            "
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+
+            🖼️<br>
+
+            Gambar materi tidak dapat dimuat.
+
+        </div>
+
+    </div>
+
+
+    <div class="card-content">
+
+        <div class="card-number">
+            2
+        </div>
+
+        <h3>
+            🙏 Norma Agama & Kesusilaan
+        </h3>
+
+
+        <p>
+
+            Norma agama bersumber dari ajaran Tuhan,
+            sedangkan norma kesusilaan bersumber dari
+            hati nurani manusia tentang baik dan buruk.
+
+        </p>
+
+
+        <div class="example">
+
+            <strong>
+                Norma agama:
+            </strong>
+
+            <br>
+
+            Beribadah, berkata jujur,
+            menghormati sesama,
+            dan menjalankan ajaran agama.
+
+        </div>
+
+
+        <div class="example">
+
+            <strong>
+                Norma kesusilaan:
+            </strong>
+
+            <br>
+
+            Tidak berbohong,
+            tidak mencuri,
+            membantu orang yang membutuhkan,
+            dan berbuat baik kepada sesama.
+
+        </div>
+
+
+        <div class="example">
+
+            <strong>
+                Akibat melanggar:
+            </strong>
+
+            <br>
+
+            Mendapat teguran,
+            merasa bersalah,
+            kehilangan kepercayaan,
+            dan dalam konteks agama
+            dapat dianggap berdosa.
+
+        </div>
+
+    </div>
+
+</article>
+
+
+
+<!-- =========================================
+     CARD 3
+========================================= -->
+
+<article class="material-card">
+
+
+    <div class="image-box">
+
+        <img
+            src="https://sdn1kandangankota.github.io/kelas6b/pjj/Pendidikan-Pancasila-BS-KLS-VI-Rev_74.png"
+            alt="Materi Norma Hukum"
+            loading="lazy"
+            onerror="
+                this.style.display='none';
+                this.nextElementSibling.style.display='block';
+            "
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+
+            🖼️<br>
+
+            Gambar materi tidak dapat dimuat.
+
+        </div>
+
+    </div>
+
+
+    <div class="card-content">
+
+        <div class="card-number">
+            3
+        </div>
+
+        <h3>
+            ⚖️ Norma Hukum
+        </h3>
+
+
+        <p>
+
+            Norma hukum adalah aturan yang dibuat oleh lembaga
+            yang berwenang dan memiliki sanksi yang bersifat mengikat.
+
+        </p>
+
+
+        <div class="example">
+
+            <strong>
+                Contoh:
+            </strong>
+
+            <br>
+
+            Mematuhi rambu lalu lintas,
+            tidak mencuri,
+            dan menaati peraturan yang berlaku.
+
+        </div>
+
+
+        <div class="example">
+
+            <strong>
+                Akibat melanggar:
+            </strong>
+
+            <br>
+
+            Dapat dikenai sanksi sesuai dengan
+            ketentuan hukum, misalnya denda
+            atau hukuman lainnya.
+
+        </div>
+
+    </div>
+
+</article>
+
+
+</section>
+
+
+
+<!-- =========================================
+     RINGKASAN
+========================================= -->
+
+<div class="section-title">
+
+    <h2>
+        🧠 Ingat 4 Norma!
+    </h2>
+
+    <p>
+        Gunakan ringkasan ini untuk membantu mengingat
+        materi sebelum mengerjakan kuis.
+    </p>
+
+</div>
+
+
+<section class="summary">
+
+
+    <div class="summary-item">
+
+        <div class="summary-icon">
+            🤝
+        </div>
+
+        <strong>
+            Kesopanan
+        </strong>
+
+        <span>
+            Tata krama dalam pergaulan
+        </span>
+
+    </div>
+
+
+    <div class="summary-item">
+
+        <div class="summary-icon">
+            🙏
+        </div>
+
+        <strong>
+            Agama
+        </strong>
+
+        <span>
+            Bersumber dari ajaran agama
+        </span>
+
+    </div>
+
+
+    <div class="summary-item">
+
+        <div class="summary-icon">
+            ❤️
+        </div>
+
+        <strong>
+            Kesusilaan
+        </strong>
+
+        <span>
+            Bersumber dari hati nurani
+        </span>
+
+    </div>
+
+
+    <div class="summary-item">
+
+        <div class="summary-icon">
+            ⚖️
+        </div>
+
+        <strong>
+            Hukum
+        </strong>
+
+        <span>
+            Memiliki aturan dan sanksi
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     VIDEO
+========================================= -->
+
+<div class="section-title">
+
+    <h2>
+        🎬 Saatnya Menonton Video!
+    </h2>
+
+    <p>
+        Simak video pembelajaran berikut
+        sebelum mengerjakan kuis.
+    </p>
+
+</div>
+
+
+<section class="video-card">
+
+
+    <div class="video-wrapper">
+
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/ooswPeoKfNA"
+            title="Video Pembelajaran Norma"
+            allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share
+            "
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <div class="video-info">
+
+        <h3>
+            🎥 Video Pembelajaran —
+            Norma dalam Kehidupan
+        </h3>
+
+        <p>
+
+            Tonton sampai selesai.
+
+            Setelah itu, coba ceritakan kembali
+            dengan bahasamu sendiri apa yang kamu pahami
+            tentang norma kesopanan, agama,
+            kesusilaan, dan hukum.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUIZ TITLE
+========================================= -->
+
+<div class="section-title">
+
+    <h2>
+        🎯 Tantangan Kuis 6B
+    </h2>
+
+    <p>
+        Jawablah 10 soal berikut.
+        Pilih satu jawaban yang paling tepat.
+    </p>
+
+</div>
+
+
+
+<section class="quiz-card">
+
+
+    <!-- PROGRESS -->
+
+    <div class="progress-box">
+
+        <div class="progress-text">
+
+            <span>
+                Progress mengerjakan
+            </span>
+
+            <span id="progressText">
+                0 / 10
+            </span>
+
+        </div>
+
+
+        <div class="progress">
+
+            <div
+                class="progress-bar"
+                id="progressBar">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAMA -->
+
+    <div class="student-box">
+
+        <label for="studentName">
+
+            👤 Nama Lengkap
+
+        </label>
+
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Tuliskan nama lengkap"
+            autocomplete="off"
+        >
+
+    </div>
+
+
+
+    <!-- SOAL 1 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 1
+        </div>
+
+        <h3>
+
+            Rani berbicara dengan suara keras kepada gurunya
+            dan tidak menggunakan bahasa yang santun.
+            Norma apakah yang dilanggar?
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q1"
+                    value="A"
+                >
+
+                <span>
+                    A. Norma hukum
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q1"
+                    value="B"
+                >
+
+                <span>
+                    B. Norma kesopanan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q1"
+                    value="C"
+                >
+
+                <span>
+                    C. Norma agama
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q1"
+                    value="D"
+                >
+
+                <span>
+                    D. Norma olahraga
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 2 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 2
+        </div>
+
+        <h3>
+
+            Seseorang mengambil barang milik orang lain tanpa izin.
+            Salah satu akibat yang dapat terjadi adalah...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q2"
+                    value="A"
+                >
+
+                <span>
+                    A. Mendapat penghargaan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q2"
+                    value="B"
+                >
+
+                <span>
+                    B. Mendapat kepercayaan lebih besar
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q2"
+                    value="C"
+                >
+
+                <span>
+                    C. Dapat dikenai sanksi sesuai hukum
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q2"
+                    value="D"
+                >
+
+                <span>
+                    D. Menjadi teladan
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 3 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 3
+        </div>
+
+        <h3>
+
+            Tidak melaksanakan kewajiban beribadah sesuai ajaran agama
+            merupakan contoh pelanggaran terhadap...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q3"
+                    value="A"
+                >
+
+                <span>
+                    A. Norma agama
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q3"
+                    value="B"
+                >
+
+                <span>
+                    B. Norma hukum
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q3"
+                    value="C"
+                >
+
+                <span>
+                    C. Norma kesopanan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q3"
+                    value="D"
+                >
+
+                <span>
+                    D. Norma permainan
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 4 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 4
+        </div>
+
+        <h3>
+
+            Edo menemukan uang di kelas.
+            Ia mengetahui uang tersebut bukan miliknya,
+            tetapi ia memilih untuk menyimpannya.
+            Perbuatan tersebut bertentangan dengan...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q4"
+                    value="A"
+                >
+
+                <span>
+                    A. Norma kesusilaan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q4"
+                    value="B"
+                >
+
+                <span>
+                    B. Norma olahraga
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q4"
+                    value="C"
+                >
+
+                <span>
+                    C. Norma lalu lintas
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q4"
+                    value="D"
+                >
+
+                <span>
+                    D. Norma permainan
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 5 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 5
+        </div>
+
+        <h3>
+
+            Akibat yang mungkin diterima seseorang
+            karena berbicara tidak sopan kepada orang lain adalah...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q5"
+                    value="A"
+                >
+
+                <span>
+                    A. Mendapat hadiah
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q5"
+                    value="B"
+                >
+
+                <span>
+                    B. Ditegur atau dianggap tidak sopan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q5"
+                    value="C"
+                >
+
+                <span>
+                    C. Mendapat penghargaan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q5"
+                    value="D"
+                >
+
+                <span>
+                    D. Mendapat nilai sempurna
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 6 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 6
+        </div>
+
+        <h3>
+
+            Mematuhi lampu lalu lintas merupakan contoh menaati...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q6"
+                    value="A"
+                >
+
+                <span>
+                    A. Norma kesopanan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q6"
+                    value="B"
+                >
+
+                <span>
+                    B. Norma kesusilaan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q6"
+                    value="C"
+                >
+
+                <span>
+                    C. Norma hukum
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q6"
+                    value="D"
+                >
+
+                <span>
+                    D. Norma keluarga saja
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 7 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 7
+        </div>
+
+        <h3>
+
+            Seseorang berbohong kepada temannya
+            dan kemudian merasa bersalah karena mengetahui
+            bahwa perbuatannya tidak benar.
+            Hal ini berkaitan dengan...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q7"
+                    value="A"
+                >
+
+                <span>
+                    A. Norma kesusilaan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q7"
+                    value="B"
+                >
+
+                <span>
+                    B. Norma lalu lintas
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q7"
+                    value="C"
+                >
+
+                <span>
+                    C. Norma olahraga
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q7"
+                    value="D"
+                >
+
+                <span>
+                    D. Norma sekolah saja
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 8 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 8
+        </div>
+
+        <h3>
+
+            Salah satu akibat melanggar norma agama
+            menurut ajaran agama yang dianut seseorang adalah...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q8"
+                    value="A"
+                >
+
+                <span>
+                    A. Dianggap selalu benar
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q8"
+                    value="B"
+                >
+
+                <span>
+                    B. Mendapat hadiah
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q8"
+                    value="C"
+                >
+
+                <span>
+                    C. Dapat dianggap berdosa
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q8"
+                    value="D"
+                >
+
+                <span>
+                    D. Mendapat penghargaan
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 9 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 9
+        </div>
+
+        <h3>
+
+            Seorang siswa memotong pembicaraan temannya terus-menerus
+            tanpa memberikan kesempatan untuk berbicara.
+            Perbuatan tersebut dapat menyebabkan...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q9"
+                    value="A"
+                >
+
+                <span>
+                    A. Temannya merasa tidak dihargai
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q9"
+                    value="B"
+                >
+
+                <span>
+                    B. Mendapat hadiah
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q9"
+                    value="C"
+                >
+
+                <span>
+                    C. Menjadi lebih disukai semua orang
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q9"
+                    value="D"
+                >
+
+                <span>
+                    D. Mendapat penghargaan
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOAL 10 -->
+
+    <div class="question">
+
+        <div class="question-number">
+            SOAL 10
+        </div>
+
+        <h3>
+
+            Seseorang melanggar aturan hukum dan terbukti melakukan
+            pelanggaran. Akibat yang mungkin diterimanya adalah...
+
+        </h3>
+
+
+        <div class="options">
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q10"
+                    value="A"
+                >
+
+                <span>
+                    A. Mendapat hadiah
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q10"
+                    value="B"
+                >
+
+                <span>
+                    B. Mendapat penghargaan
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q10"
+                    value="C"
+                >
+
+                <span>
+                    C. Mendapat sanksi sesuai ketentuan hukum
+                </span>
+
+            </label>
+
+
+            <label class="option">
+
+                <input
+                    type="radio"
+                    name="q10"
+                    value="D"
+                >
+
+                <span>
+                    D. Mendapat nilai tambahan
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BUTTON -->
+
+    <div class="button-area">
+
+        <button
+            class="btn btn-primary"
+            onclick="checkQuiz()">
+
+            🚀 Periksa Jawaban
+
+        </button>
+
+
+        <button
+            class="btn btn-secondary"
+            onclick="resetQuiz()">
+
+            🔄 Ulangi Kuis
+
+        </button>
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <div
+        class="result"
+        id="result">
+
+        <div
+            class="result-icon"
+            id="resultIcon">
+
+            🎉
+
+        </div>
+
+
+        <h2 id="resultTitle">
+            Hasil Kuis
+        </h2>
+
+
+        <div
+            class="score"
+            id="score">
+
+            0
+
+        </div>
+
+
+        <p
+            class="result-message"
+            id="resultMessage">
+
+            -
+
+        </p>
+
+
+        <div
+            class="correction"
+            id="correction">
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <strong>
+        🌟 Selamat bekerja dan semangat belajar!
+    </strong>
+
+    <span>
+        Jaga kesehatan dan Imunitas selama PJJ
+    </span>
+
+    <span>
+        by gurukls6B@2026
+    </span>
+
+</footer>
+
+
+
+<script>
+
+
+/* =========================================
+   KUNCI JAWABAN
+========================================= */
+
+const answerKey = {
+
+    q1:"B",
+    q2:"C",
+    q3:"A",
+    q4:"A",
+    q5:"B",
+    q6:"C",
+    q7:"A",
+    q8:"C",
+    q9:"A",
+    q10:"C"
+
+};
+
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+const radioButtons =
+    document.querySelectorAll(
+        'input[type="radio"]'
+    );
+
+
+radioButtons.forEach(
+    function(radio){
+
+        radio.addEventListener(
+            "change",
+            updateProgress
+        );
+
+    }
+);
+
+
+function updateProgress(){
+
+    let answered = 0;
+
+
+    for(
+        let i = 1;
+        i <= 10;
+        i++
+    ){
+
+        const selected =
+            document.querySelector(
+                'input[name="q' +
+                i +
+                '"]:checked'
+            );
+
+
+        if(selected){
+
+            answered++;
+
+        }
+
+    }
+
+
+    const percent =
+        (answered / 10) * 100;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        percent + "%";
+
+
+    document.getElementById(
+        "progressText"
+    ).textContent =
+        answered + " / 10";
+
+}
+
+
+
+/* =========================================
+   CEK QUIZ
+========================================= */
+
+function checkQuiz(){
+
+    const nameInput =
+        document.getElementById(
+            "studentName"
+        );
+
+
+    const studentName =
+        nameInput.value.trim();
+
+
+    if(studentName === ""){
+
+        alert(
+            "Silakan tuliskan nama lengkap terlebih dahulu 😊"
+        );
+
+        nameInput.focus();
+
+        return;
+
+    }
+
+
+    let correct = 0;
+
+    let unanswered = 0;
+
+
+    let correctionHTML =
+        "<strong>📌 Pembahasan Jawaban:</strong><br><br>";
+
+
+    for(
+        let i = 1;
+        i <= 10;
+        i++
+    ){
+
+        const selected =
+            document.querySelector(
+                'input[name="q' +
+                i +
+                '"]:checked'
+            );
+
+
+        if(!selected){
+
+            unanswered++;
+
+
+            correctionHTML +=
+
+                "Soal " +
+                i +
+                ": belum dijawab. " +
+
+                "Jawaban benar: " +
+
+                "<strong>" +
+                answerKey["q" + i] +
+                "</strong><br>";
+
+            continue;
+
+        }
+
+
+        if(
+            selected.value ===
+            answerKey["q" + i]
+        ){
+
+            correct++;
+
+
+            correctionHTML +=
+
+                "Soal " +
+                i +
+                ": ✅ benar<br>";
+
+        }
+
+        else{
+
+            correctionHTML +=
+
+                "Soal " +
+                i +
+                ": ❌ jawabanmu " +
+
+                "<strong>" +
+                selected.value +
+                "</strong>, " +
+
+                "jawaban benar " +
+
+                "<strong>" +
+                answerKey["q" + i] +
+                "</strong><br>";
+
+        }
+
+    }
+
+
+    const score =
+        Math.round(
+            (correct / 10) * 100
+        );
+
+
+    const result =
+        document.getElementById(
+            "result"
+        );
+
+
+    const resultIcon =
+        document.getElementById(
+            "resultIcon"
+        );
+
+
+    const resultTitle =
+        document.getElementById(
+            "resultTitle"
+        );
+
+
+    const scoreElement =
+        document.getElementById(
+            "score"
+        );
+
+
+    const resultMessage =
+        document.getElementById(
+            "resultMessage"
+        );
+
+
+    const correction =
+        document.getElementById(
+            "correction"
+        );
+
+
+    scoreElement.textContent =
+        score;
+
+
+    if(score === 100){
+
+        resultIcon.textContent =
+            "🏆";
+
+
+        resultTitle.textContent =
+            "Hebat, " +
+            studentName +
+            "!";
+
+
+        resultMessage.textContent =
+            "Sempurna! Kamu berhasil mendapatkan nilai 100. Pertahankan semangat belajarmu! 🌟";
+
+    }
+
+    else if(score >= 80){
+
+        resultIcon.textContent =
+            "🎉";
+
+
+        resultTitle.textContent =
+            "Bagus sekali, " +
+            studentName +
+            "!";
+
+
+        resultMessage.textContent =
+            "Pemahamanmu sudah sangat baik. Coba ulangi lagi jika ingin mendapatkan nilai 100.";
+
+    }
+
+    else if(score >= 60){
+
+        resultIcon.textContent =
+            "💪";
+
+
+        resultTitle.textContent =
+            "Tetap semangat, " +
+            studentName +
+            "!";
+
+
+        resultMessage.textContent =
+            "Kamu sudah berusaha dengan baik. Baca kembali materi lalu coba kuis sekali lagi.";
+
+    }
+
+    else{
+
+        resultIcon.textContent =
+            "🌱";
+
+
+        resultTitle.textContent =
+            "Jangan menyerah, " +
+            studentName +
+            "!";
+
+
+        resultMessage.textContent =
+            "Tidak apa-apa jika masih banyak yang salah. Pelajari kembali materinya dan coba lagi.";
+
+    }
+
+
+    correction.innerHTML =
+        correctionHTML;
+
+
+    if(unanswered > 0){
+
+        resultMessage.textContent +=
+
+            " Masih ada " +
+            unanswered +
+            " soal yang belum dijawab.";
+
+    }
+
+
+    result.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        function(){
+
+            result.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"center"
+
+            });
+
+        },
+        100
+    );
+
+}
+
+
+
+/* =========================================
+   ULANGI KUIS
+========================================= */
+
+function resetQuiz(){
+
+    document
+        .querySelectorAll(
+            'input[type="radio"]'
+        )
+        .forEach(
+            function(radio){
+
+                radio.checked =
+                    false;
+
+            }
+        );
+
+
+    document.getElementById(
+        "studentName"
+    ).value = "";
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        "0%";
+
+
+    document.getElementById(
+        "progressText"
+    ).textContent =
+        "0 / 10";
+
+
+    document.getElementById(
+        "result"
+    ).classList.remove(
+        "show"
+    );
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+
