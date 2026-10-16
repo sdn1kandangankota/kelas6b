@@ -65,7 +65,7 @@ section{padding:28px 0}.section-head{margin-bottom:18px}.kicker{color:var(--blue
   </div>
  </section>
  <section id="video">
-  <div class="section-head"><div class="kicker">TONTON & PAHAMI</div><h2>Video Pembelajaran</h2><p>Tonton video tentang benua-benua di dunia. Catat satu fakta menarik yang kamu temukan.</p></div>
+  <div class="section-head"><div class="kicker">TONTON & PAHAMI</div><h2>Video Pembelajaran</h2><p>Tonton video tentang benua-benua di dunia. Catat fakta-fakta menarik yang kamu temukan.</p></div>
   <div class="panel video-panel">
    <div><h3>▶️ Yuk, belajar melalui video!</h3><p style="color:#64748b">Video YouTube ditampilkan langsung di halaman ini. Jika video tidak muncul, periksa koneksi internet atau buka melalui tombol di bawah.</p><a class="btn" href="https://www.youtube.com/watch?v=HxUqXizN4Xk" target="_blank" rel="noopener">Buka Video di YouTube ↗</a><p class="note-small">Video dapat diputar langsung di halaman ini atau dibuka melalui YouTube.</p></div>
    <div id="videoArea"><div class="video-placeholder"><div><div class="play">▶️</div><strong>Video Tujuh Benua di Dunia</strong><p style="margin:4px 0 0;color:#526078">Siapkan koneksi internet untuk menonton.</p></div></div></div>
@@ -108,7 +108,7 @@ section{padding:28px 0}.section-head{margin-bottom:18px}.kicker{color:var(--blue
   {q:'Australia terletak di belahan Bumi selatan dan memiliki hewan khas seperti kanguru.',a:true},
   {q:'Eropa berada sepenuhnya di belahan Bumi selatan.',a:false},
   {q:'Pergerakan lempeng tektonik berperan dalam perubahan posisi daratan Bumi selama jutaan tahun.',a:true},
-  {q:'Dalam model enam benua yang menggabungkan Amerika, Amerika Utara dan Selatan dihitung sebagai satu benua Amerika.',a:true}
+  {q:'Nama Australia berasal dari kata Latin australis yang berarti “utara”.',a:false}
  ];
  const list=document.getElementById('questionList');
  list.innerHTML=questions.map((item,i)=>`<div class="question"><div class="qnum">${i+1}</div><div><div class="qtext">${item.q}</div><div class="answers"><label><input type="radio" name="q${i}" value="true"> Benar</label><label><input type="radio" name="q${i}" value="false"> Salah</label></div></div></div>`).join('');
