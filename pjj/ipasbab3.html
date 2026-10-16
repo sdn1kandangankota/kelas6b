@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tugas PJJ IPAS Kelas 6B — Tujuh Benua di Dunia</title>
+<style>
+:root{--ink:#20304a;--muted:#64748b;--blue:#3d68d9;--cyan:#40c8d7;--purple:#8b6be8;--pink:#ff8db3;--yellow:#ffd76a;--mint:#b8f0dd;--paper:#f5f8ff;--white:#fff;--shadow:0 14px 35px rgba(48,72,130,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#edf5ff 0,#fbfaff 42%,#f4fbff 100%);line-height:1.65}
+a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+.hero{position:relative;overflow:hidden;padding:34px 0 42px;background:linear-gradient(125deg,#3459c9,#6b6fe5 55%,#9d75e9);color:#fff;border-radius:0 0 34px 34px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#ffffff18}.hero:before{width:250px;height:250px;right:-50px;top:-80px}.hero:after{width:160px;height:160px;left:-40px;bottom:-85px}
+.topline{display:flex;justify-content:space-between;gap:14px;align-items:center;position:relative;z-index:1}.school{font-weight:850;letter-spacing:.2px}.date{font-size:.9rem;background:#ffffff22;border:1px solid #ffffff50;border-radius:999px;padding:7px 13px}
+.hero-main{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:24px;position:relative;z-index:1;margin-top:28px}.eyebrow{display:inline-block;background:#fff2b8;color:#624d12;font-size:.8rem;font-weight:800;padding:5px 12px;border-radius:999px}.hero h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.1;margin:14px 0}.hero p{max-width:650px;color:#f0f2ff;margin:0}.globe{font-size:clamp(7rem,17vw,12rem);text-align:center;filter:drop-shadow(0 12px 10px #1d2c7750);animation:float 4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px) rotate(4deg)}}
+.nav{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;position:relative;z-index:2}.nav a{font-size:.9rem;text-decoration:none;background:#fff;color:#334c9e;padding:9px 14px;border-radius:12px;font-weight:750;box-shadow:0 4px 12px #263b8520}.notice{margin:24px auto 0;padding:14px 18px;border-radius:16px;background:#fff8dd;border:1px solid #ffe59a;color:#6d561b;display:flex;gap:12px;align-items:flex-start}
+section{padding:28px 0}.section-head{margin-bottom:18px}.kicker{color:var(--blue);font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:850}.section-head h2{font-size:clamp(1.55rem,3vw,2.2rem);margin:3px 0 5px;line-height:1.25}.section-head p{color:var(--muted);margin:0;max-width:800px}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.featured-continent{margin:20px 0 24px;background:#fff;padding:14px;border:1px solid #e4eaff;border-radius:22px;box-shadow:var(--shadow)}.featured-continent img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;border-radius:14px;background:#f4f7ff}.featured-continent figcaption{padding:10px 4px 0;color:var(--muted);font-size:.85rem}.featured-continent a{color:var(--blue);font-weight:750}.panel{background:#fff;border:1px solid #e4eaff;border-radius:22px;padding:22px;box-shadow:var(--shadow)}.panel h3{margin:0 0 8px}.pill{display:inline-block;font-size:.76rem;font-weight:800;border-radius:999px;padding:4px 10px;background:#eaf0ff;color:#3858ba}.fact{display:flex;gap:12px;margin:13px 0}.fact-icon{flex:0 0 40px;height:40px;border-radius:13px;display:grid;place-items:center;background:#e9f8ff;font-size:1.3rem}.fact p{margin:0;color:#526078}.fact strong{color:var(--ink)}
+.continent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.continent{background:#fff;border:1px solid #e4eaff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}.continent:hover{transform:translateY(-4px);box-shadow:0 18px 40px #304f9b20}.mapbox{height:178px;background:linear-gradient(145deg,#e6f6ff,#e9e5ff);display:grid;place-items:center;padding:12px;position:relative}.mapbox img{width:100%;height:100%;object-fit:contain}.map-placeholder{font-size:4rem;opacity:.9}.map-label{position:absolute;left:12px;top:12px;background:#fff;color:#4455a5;border-radius:9px;padding:4px 9px;font-size:.75rem;font-weight:850}.card-body{padding:17px}.card-body h3{margin:0 0 8px;font-size:1.18rem}.card-body p{margin:0 0 10px;color:#59667d;font-size:.92rem}.card-body ul{padding-left:19px;margin:8px 0 0;font-size:.9rem}.card-body li{margin:4px 0}.note-small{font-size:.82rem;color:#718096;margin-top:12px}
+.video-panel{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}.video-frame{aspect-ratio:16/9;width:100%;border:0;border-radius:16px;background:#e6edff}.video-placeholder{display:grid;place-items:center;min-height:210px;border-radius:16px;background:linear-gradient(135deg,#d8f7f3,#dfe5ff);text-align:center;padding:20px}.video-placeholder .play{font-size:3.5rem}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:11px 16px;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;cursor:pointer;font:inherit;font-weight:800;box-shadow:0 7px 15px #3d68d933}.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}.btn.secondary{background:#eaf0ff;color:#3555b4;box-shadow:none}.btn.pink{background:#ed679c}
+.quiz-shell{background:linear-gradient(135deg,#fff,#f1f4ff);border:1px solid #dfe6ff;border-radius:26px;padding:clamp(18px,4vw,30px);box-shadow:var(--shadow)}.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.progress{height:9px;background:#e6eafa;border-radius:999px;overflow:hidden;margin:15px 0 22px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--purple));transition:width .3s}.student-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0 20px}.field label{display:block;font-size:.86rem;font-weight:800;margin-bottom:6px}.field input{width:100%;border:1px solid #cfd8f2;border-radius:12px;padding:12px 13px;font:inherit;background:#fff;color:var(--ink)}.question-list{display:grid;gap:12px}.question{display:grid;grid-template-columns:44px 1fr;gap:12px;background:#fff;border:1px solid #e4e9fb;border-radius:16px;padding:15px}.qnum{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#eeeaff;color:#6d50c7;font-weight:900}.qtext{font-weight:700;margin:2px 0 12px}.answers{display:flex;gap:9px;flex-wrap:wrap}.answers label{display:inline-flex;align-items:center;gap:7px;border:1px solid #dbe3f7;padding:7px 12px;border-radius:10px;cursor:pointer;font-size:.9rem}.answers input{accent-color:#6659d9}.quiz-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.result{display:none;margin-top:20px;padding:20px;border-radius:18px;background:#e9fbf4;border:1px solid #b7eed8}.result.show{display:block}.score{font-size:2.6rem;font-weight:950;color:#17815c;line-height:1.2}.answer-key{margin-top:14px;background:#fff;border-radius:12px;padding:12px}.answer-key ol{margin:7px 0 0;padding-left:23px}.answer-key li{margin:4px 0}.footer{margin-top:20px;padding:30px 0;background:#253b80;color:#fff;text-align:center;border-radius:30px 30px 0 0}.footer strong{display:block;font-size:1.2rem}.footer small{color:#dce5ff}.to-top{position:fixed;right:16px;bottom:16px;text-decoration:none;background:#fff;color:#3e58b7;border-radius:50%;width:44px;height:44px;display:grid;place-items:center;box-shadow:var(--shadow);font-weight:900}
+@media(max-width:800px){.hero-main,.intro-grid,.video-panel{grid-template-columns:1fr}.globe{font-size:7rem;order:-1}.continent-grid{grid-template-columns:repeat(2,1fr)}.hero-main{gap:8px}.hero h1{font-size:2.5rem}}
+@media(max-width:520px){.topline{align-items:flex-start;flex-direction:column}.continent-grid{grid-template-columns:1fr}.student-row{grid-template-columns:1fr}.hero{padding-top:24px}.globe{font-size:6rem}.nav a{flex:1;text-align:center}.mapbox{height:190px}}
+@media print{.nav,.btn,.to-top{display:none}.hero{border-radius:0}.continent{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="hero" id="atas">
+ <div class="wrap">
+  <div class="topline"><div class="school">SDN 1 KANDANGAN KOTA</div><div class="date" id="dateLine">📅 Memuat tanggal…</div></div>
+  <div class="hero-main">
+   <div><span class="eyebrow">🌤️ BELAJAR DARI RUMAH • KELAS 6B</span><h1>Jelajah<br>7 Benua di Dunia!</h1><p>Ayo mengenal bumi, menemukan fakta unik setiap benua, menonton video pembelajaran, lalu belajar memahami lewat kuis!</p>
+    <nav class="nav"><a href="#materi">📚 Materi</a><a href="#peta">🗺️ Kartu Benua</a><a href="#video">▶️ Video</a><a href="#kuis">✏️ Kuis</a></nav>
+   </div>
+   <div class="globe" aria-label="Bumi">🌎</div>
+  </div>
+ </div>
+</header>
+<main class="wrap">
+ <div class="notice"><span style="font-size:1.5rem">😷</span><div><strong>Utamakan kesehatan saat kabut asap.</strong><br>Ikuti arahan keluarga dan sekolah, kurangi aktivitas di luar ruangan, dan minum air putih yang cukup. Kerjakan tugas dari tempat yang nyaman serta beristirahat jika merasa kurang sehat.</div></div>
+ <section id="materi">
+  <div class="section-head"><div class="kicker">IPAS • BAB 3 • TOPIK A</div><h2>Bumi Memiliki Benua-Benua</h2><p>Benua adalah hamparan daratan yang sangat luas di permukaan Bumi. Benua dipisahkan oleh samudra dan memiliki bentang alam, iklim, penduduk, serta budaya yang beragam.</p></div>
+   <figure class="featured-continent">
+    <img src="https://www.inilah.com/_next/image?url=https%3A%2F%2Fc.inilah.com%2Freborn%2F2026%2F07%2F7_Benua_di_Dunia_Beserta_Nama_dan_Faktanya_c678d54f59.png&amp;w=1080&amp;q=60" alt="Infografik peta tujuh benua di dunia" loading="lazy">
+    <figcaption>Gambar: tujuh benua di dunia. Sumber referensi: <a href="https://www.inilah.com" target="_blank" rel="noopener noreferrer">Inilah.com</a>.</figcaption>
+   </figure>
+  <div class="intro-grid">
+   <article class="panel"><span class="pill">Ingat konsep penting</span><h3>Enam benua atau tujuh benua?</h3>
+    <div class="fact"><div class="fact-icon">🌐</div><p><strong>Model 7 benua</strong><br>Amerika dibagi menjadi Amerika Utara dan Amerika Selatan, sehingga ada tujuh: Asia, Afrika, Amerika Utara, Amerika Selatan, Antarktika, Eropa, dan Australia.</p></div>
+    <div class="fact"><div class="fact-icon">🧭</div><p><strong>Model 6 benua</strong><br>Dalam pembagian yang menggabungkan Amerika menjadi satu benua, jumlahnya enam: Asia, Afrika, Amerika, Antarktika, Eropa, dan Australia.</p></div>
+    <div class="fact"><div class="fact-icon">🪨</div><p><strong>Bagaimana benua terbentuk?</strong><br>Daratan Bumi berubah selama jutaan tahun akibat pergerakan lempeng tektonik. Dahulu banyak daratan tergabung dalam superbenua, termasuk Pangaea, lalu terpecah dan bergerak menuju posisi sekarang.</p></div>
+   </article>
+   <aside class="panel"><h3>🎯 Tujuan belajarku</h3><p>Setelah belajar, aku dapat:</p><ul><li>menunjukkan letak tujuh benua di peta dunia;</li><li>mengenali sejarah, julukan, dan ciri khas tiap benua;</li><li>membandingkan fakta tentang benua;</li><li>menjawab kuis dengan jujur dan memperbaiki hasil belajar.</li></ul><hr style="border:0;border-top:1px solid #e7ebf8;margin:18px 0"><strong>💡 Tips belajar</strong><p style="color:#64748b;margin-bottom:0">Bacalah kartu satu per satu. Coba ceritakan kembali dengan bahasamu sendiri sebelum mengerjakan kuis.</p></aside>
+  </div>
+ </section>
+ <section id="peta">
+  <div class="section-head"><div class="kicker">JELAJAHI PETA</div><h2>7 Benua, Banyak Keajaiban</h2><p>Pelajari penjelasan tujuh benua pada kartu-kartu berikut. Infografik peta ditampilkan satu kali di bagian atas materi agar halaman lebih ringkas.</p></div>
+  <div class="continent-grid">
+   <article class="continent"><div class="card-body"><h3>🌏 Asia</h3><p><strong>Letak:</strong> terutama di belahan Bumi utara dan timur; membentang dari kawasan Arktik hingga dekat khatulistiwa. Berbatasan dengan Eropa di wilayah Ural dan sekitarnya.</p><p><strong>Sejarah & nama:</strong> menjadi tempat berkembangnya peradaban kuno seperti Mesopotamia, Lembah Indus, Tiongkok, dan Nusantara. Nama “Asia” berasal dari istilah kuno yang makna asalnya masih diperdebatkan.</p><p><strong>Julukan:</strong> sering disebut benua terbesar dan terpadat penduduknya.</p><ul><li>Memiliki Gunung Everest, puncak tertinggi di atas permukaan laut.</li><li>Iklim dan budaya sangat beragam; terdapat gurun, hutan hujan, dan tundra.</li><li>Indonesia berada di Asia Tenggara.</li></ul></div></article>
+   <article class="continent"><div class="card-body"><h3>🌍 Afrika</h3><p><strong>Letak:</strong> dilalui garis khatulistiwa dan meridian nol; berada di antara Samudra Atlantik dan Hindia.</p><p><strong>Sejarah & nama:</strong> Afrika adalah salah satu wilayah penting asal-usul manusia. Peradaban Mesir Kuno berkembang di sekitar Sungai Nil. Asal nama “Afrika” memiliki beberapa penjelasan historis.</p><p><strong>Julukan:</strong> kerap dijuluki benua hitam dalam istilah lama, tetapi sebutan ini dapat dianggap menyederhanakan keragaman masyarakatnya.</p><ul><li>Memiliki Gurun Sahara, salah satu gurun panas terbesar.</li><li>Sungai Nil termasuk sungai terpanjang di dunia.</li><li>Sangat kaya bahasa, satwa liar, sumber daya, dan budaya.</li></ul></div></article>
+   <article class="continent"><div class="card-body"><h3>🌎 Amerika Utara</h3><p><strong>Letak:</strong> terutama di belahan Bumi utara dan barat, dari kawasan Arktik hingga dekat Amerika Tengah.</p><p><strong>Sejarah & nama:</strong> telah dihuni masyarakat pribumi selama ribuan tahun sebelum kedatangan bangsa Eropa. Nama “Amerika” dikaitkan dengan penjelajah Amerigo Vespucci.</p><p><strong>Ciri khas:</strong> bentang alamnya sangat beragam.</p><ul><li>Memiliki Pegunungan Rocky, Great Lakes, dan wilayah tundra.</li><li>Kanada, Amerika Serikat, dan Meksiko termasuk negara di benua ini.</li><li>Iklim berkisar dari kutub hingga tropis.</li></ul></div></article>
+   <article class="continent"><div class="card-body"><h3>🌎 Amerika Selatan</h3><p><strong>Letak:</strong> sebagian besar berada di belahan Bumi selatan dan barat; dilalui garis khatulistiwa di bagian utara.</p><p><strong>Sejarah & nama:</strong> dihuni masyarakat asli, termasuk peradaban Inka di kawasan Andes. Nama Amerika merujuk pada Amerigo Vespucci, sedangkan istilah Selatan menunjukkan letaknya dalam pembagian benua.</p><p><strong>Ciri khas:</strong> kaya hutan hujan dan pegunungan.</p><ul><li>Hutan Amazon merupakan hutan hujan tropis luas dengan keanekaragaman hayati tinggi.</li><li>Pegunungan Andes membentang di sisi barat.</li><li>Bahasa Spanyol dan Portugis banyak digunakan.</li></ul></div></article>
+   <article class="continent"><div class="card-body"><h3>🌎 Antarktika</h3><p><strong>Letak:</strong> mengelilingi Kutub Selatan dan hampir seluruhnya berada di dalam Lingkar Antarktika.</p><p><strong>Sejarah & nama:</strong> keberadaan daratan di selatan telah lama diperkirakan; penjelajahan modern mengonfirmasi benua ini pada abad ke-19. Nama Antarktika berkaitan dengan wilayah yang berlawanan dengan Arktik.</p><p><strong>Julukan:</strong> benua es.</p><ul><li>Sebagian besar permukaannya tertutup lapisan es tebal.</li><li>Tidak memiliki penduduk tetap; ilmuwan tinggal sementara di stasiun penelitian.</li><li>Penguin, anjing laut, dan paus hidup di kawasan sekitarnya.</li></ul></div></article>
+   <article class="continent"><div class="card-body"><h3>🌎 Eropa</h3><p><strong>Letak:</strong> terutama berada di belahan Bumi utara dan terletak di sebelah barat Asia. Batas konvensionalnya dengan Asia antara lain melalui Pegunungan Ural dan kawasan Laut Kaspia.</p><p><strong>Sejarah & nama:</strong> Eropa menjadi tempat berkembangnya berbagai peradaban kuno, kerajaan, serta gerakan ilmu pengetahuan dan seni. Nama “Eropa” dikenal sejak tradisi Yunani kuno.</p><p><strong>Julukan:</strong> kadang disebut “Benua Biru” dalam sumber populer, tetapi julukan ini bukan istilah geografis baku.</p><ul><li>Memiliki banyak semenanjung, pegunungan, dataran, dan negara yang letaknya berdekatan.</li><li>Bahasa, tradisi, dan budayanya sangat beragam.</li><li>Wilayahnya mencakup kawasan beriklim sedang hingga dingin.</li></ul></div></article>
+   <article class="continent"><div class="card-body"><h3>🌎 Australia</h3><p><strong>Letak:</strong> berada di belahan Bumi selatan dan timur, di antara Samudra Hindia dan Samudra Pasifik. Australia juga merupakan nama sebuah negara yang menempati sebagian besar daratan benua ini.</p><p><strong>Sejarah & nama:</strong> masyarakat Aborigin dan Penduduk Selat Torres memiliki sejarah dan kebudayaan yang telah berlangsung sangat lama. Nama “Australia” berasal dari kata Latin <em>australis</em>, yang berarti “selatan”.</p><p><strong>Ciri khas:</strong> dikenal karena satwa endemik dan bentang alamnya yang unik.</p><ul><li>Wilayah pedalaman yang luas memiliki iklim kering dan gurun.</li><li>Kanguru dan koala merupakan hewan khas yang terkenal.</li><li>Great Barrier Reef, salah satu sistem terumbu karang terbesar di dunia, berada di lepas pantai timur lautnya.</li></ul></div></article>
+  </div>
+ </section>
+ <section id="video">
+  <div class="section-head"><div class="kicker">TONTON & PAHAMI</div><h2>Video Pembelajaran</h2><p>Tonton video tentang benua-benua di dunia. Catat satu fakta menarik yang kamu temukan.</p></div>
+  <div class="panel video-panel">
+   <div><h3>▶️ Yuk, belajar melalui video!</h3><p style="color:#64748b">Video YouTube ditampilkan langsung di halaman ini. Jika video tidak muncul, periksa koneksi internet atau buka melalui tombol di bawah.</p><a class="btn" href="https://www.youtube.com/watch?v=HxUqXizN4Xk" target="_blank" rel="noopener">Buka Video di YouTube ↗</a><p class="note-small">Video dapat diputar langsung di halaman ini atau dibuka melalui YouTube.</p></div>
+   <div id="videoArea"><div class="video-placeholder"><div><div class="play">▶️</div><strong>Video Tujuh Benua di Dunia</strong><p style="margin:4px 0 0;color:#526078">Siapkan koneksi internet untuk menonton.</p></div></div></div>
+  </div>
+ </section>
+ <section id="kuis">
+  <div class="section-head"><div class="kicker">TANTANGAN PENJELAJAH</div><h2>Kuis Benar atau Salah</h2><p>Isi nama, baca setiap pernyataan, lalu pilih Benar atau Salah. Setiap jawaban benar bernilai 10 poin. Kamu boleh mengulang kuis untuk memperbaiki nilai hingga 100.</p></div>
+  <div class="quiz-shell">
+   <div class="quiz-top"><div><span class="pill">10 soal • Skor maksimal 100</span><h3 style="margin:8px 0 0">Siap menguji pengetahuanmu?</h3></div><div style="font-size:2rem">🏆</div></div>
+   <div class="progress" aria-label="Kemajuan kuis"><span id="progressBar"></span></div>
+   <div class="student-row"><div class="field"><label for="studentName">Nama lengkap siswa</label><input id="studentName" type="text" placeholder="Tuliskan namamu" autocomplete="name"></div><div class="field"><label for="studentClass">Kelas</label><input id="studentClass" type="text" value="6B" readonly></div></div>
+   <form id="quizForm">
+    <div class="question-list" id="questionList"></div>
+    <div class="quiz-actions"><button class="btn" type="submit">Periksa Jawaban & Lihat Nilai</button><button class="btn secondary" type="button" id="resetBtn">Ulangi Kuis</button></div>
+   </form>
+   <div class="result" id="result" aria-live="polite"><div id="resultGreeting"></div><div class="score" id="scoreValue">0/100</div><p id="resultMessage"></p><button class="btn pink" type="button" id="showKeyBtn">Lihat Kunci Jawaban</button><div class="answer-key" id="answerKey" hidden></div></div>
+  </div>
+ </section>
+</main>
+<footer class="footer"><div class="wrap"><strong>🌟 Selamat bekerja dan jaga kesehatan! 🌟</strong><div>Semangat dan Berdo'a.</div><small>by gurukls6B@2026 • SDN 1 Kandangan Kota</small></div></footer>
+<a class="to-top" href="#atas" aria-label="Kembali ke atas">↑</a>
+<script>
+(function(){
+ const now=new Date();
+ const hari=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+ const bulan=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+ document.getElementById('dateLine').textContent='📅 '+hari[now.getDay()]+', '+now.getDate()+' '+bulan[now.getMonth()]+' '+now.getFullYear();
+ // Ganti VIDEO_ID_YOUTUBE dengan ID video pilihan guru untuk menampilkan video di halaman.
+ const videoId='HxUqXizN4Xk';
+ if(videoId && videoId!=='VIDEO_ID_YOUTUBE'){
+  document.getElementById('videoArea').innerHTML='<iframe class="video-frame" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(videoId)+'" title="Video pembelajaran tujuh benua" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>';
+ }
+ const questions=[
+  {q:'Asia merupakan benua terbesar di dunia berdasarkan luas wilayah.',a:true},
+  {q:'Garis khatulistiwa sama sekali tidak melewati Benua Afrika.',a:false},
+  {q:'Amerika Utara dan Amerika Selatan dihitung terpisah dalam model tujuh benua.',a:true},
+  {q:'Gurun Sahara terletak di Benua Amerika Selatan.',a:false},
+  {q:'Pegunungan Andes membentang di sisi barat Amerika Selatan.',a:true},
+  {q:'Antarktika memiliki banyak kota dengan penduduk tetap sepanjang tahun.',a:false},
+  {q:'Australia terletak di belahan Bumi selatan dan memiliki hewan khas seperti kanguru.',a:true},
+  {q:'Eropa berada sepenuhnya di belahan Bumi selatan.',a:false},
+  {q:'Pergerakan lempeng tektonik berperan dalam perubahan posisi daratan Bumi selama jutaan tahun.',a:true},
+  {q:'Dalam model enam benua yang menggabungkan Amerika, Amerika Utara dan Selatan dihitung sebagai satu benua Amerika.',a:true}
+ ];
+ const list=document.getElementById('questionList');
+ list.innerHTML=questions.map((item,i)=>`<div class="question"><div class="qnum">${i+1}</div><div><div class="qtext">${item.q}</div><div class="answers"><label><input type="radio" name="q${i}" value="true"> Benar</label><label><input type="radio" name="q${i}" value="false"> Salah</label></div></div></div>`).join('');
+ const form=document.getElementById('quizForm'), result=document.getElementById('result'), progress=document.getElementById('progressBar');
+ function updateProgress(){let answered=questions.filter((_,i)=>form.querySelector(`input[name="q${i}"]:checked`)).length;progress.style.width=(answered/questions.length*100)+'%';}
+ form.addEventListener('change',updateProgress);
+ form.addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('studentName').value.trim();
+  if(!name){document.getElementById('studentName').focus();alert('Silakan tuliskan nama lengkap terlebih dahulu.');return;}
+  let score=0, unanswered=0;
+  questions.forEach((q,i)=>{const selected=form.querySelector(`input[name="q${i}"]:checked`);if(!selected)unanswered++;else if((selected.value==='true')===q.a)score+=10;});
+  document.getElementById('resultGreeting').innerHTML='<strong>Hebat, '+escapeHtml(name)+'!</strong> Hasil kuismu:';
+  document.getElementById('scoreValue').textContent=score+'/100';
+  document.getElementById('resultMessage').textContent=unanswered?`Kamu belum menjawab ${unanswered} soal. Soal yang kosong bernilai 0. Pelajari kunci jawaban, lalu ulangi kuis untuk meningkatkan nilai.`:score===100?'Sempurna! Kamu menjawab semua soal dengan benar. Pertahankan semangat belajarmu!':`Kamu menjawab ${score/10} dari 10 soal dengan benar. Baca kembali materi, lalu tekan “Ulangi Kuis” untuk mencoba lagi.`;
+  document.getElementById('answerKey').hidden=true;document.getElementById('showKeyBtn').textContent='Lihat Kunci Jawaban';
+  result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'});
+ });
+ document.getElementById('showKeyBtn').addEventListener('click',function(){
+  const key=document.getElementById('answerKey');
+  if(key.hidden){key.innerHTML='<strong>Kunci jawaban dan pembahasan singkat</strong><ol>'+questions.map((q,i)=>`<li><strong>${q.a?'Benar':'Salah'}.</strong> ${[
+   'Asia memiliki wilayah terluas dibandingkan benua lain.',
+   'Garis khatulistiwa melewati Afrika.',
+   'Dalam model tujuh benua, kedua wilayah Amerika dihitung terpisah.',
+   'Gurun Sahara berada di Afrika.',
+   'Pegunungan Andes membentang di bagian barat Amerika Selatan.',
+   'Antarktika tidak memiliki penduduk tetap; hanya ada peneliti sementara.',
+   'Australia berada di belahan selatan dan terkenal dengan kanguru.',
+   'Eropa terutama berada di belahan Bumi utara.',
+   'Lempeng tektonik mengubah posisi daratan dalam waktu geologis yang sangat panjang.',
+   'Model enam benua menggabungkan Amerika Utara dan Selatan sebagai Amerika.'
+  ][i]}</li>`).join('')+'</ol>';key.hidden=false;this.textContent='Sembunyikan Kunci Jawaban';}
+  else{key.hidden=true;this.textContent='Lihat Kunci Jawaban';}
+ });
+ document.getElementById('resetBtn').addEventListener('click',function(){
+  form.reset();result.classList.remove('show');document.getElementById('answerKey').hidden=true;document.getElementById('showKeyBtn').textContent='Lihat Kunci Jawaban';progress.style.width='0%';document.getElementById('studentName').focus();document.getElementById('kuis').scrollIntoView({behavior:'smooth'});
+ });
+ function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+})();
+</script>
+</body>
+</html>
